@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark's Anime</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      background-image: url('neymar.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ffcc00;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 300px;
+      max-width: 90%;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffcc00;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #e6b800;
+    }
+
+    .explicacao {
+      text-align: left;
+      max-width: 600px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    /* Estilo para as enquetes */
+    .enquete {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 700px;
+      border-radius: 10px;
+      text-align: left;
+      color: #ffcc00;
+    }
+
+    .enquete h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .enquete label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .resultado {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #00ff00;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <section id="menino-ney" tabindex="0">
+    <p style="color: blue; font-weight: bold;">meninoney</p>
+
+    <h1>Neymar</h1>
+
+    <img src="https://cdn.resfu.com/media/img_news/el-jugador-brasileno--neymar--durante-su-etapa-en-santos--efe.jpg?size=1000x&lossy=1" alt="Neymar" />
+
+    <h2>melhor do mundo</h2>
+
+    <div class="explicacao">
+      <p>&lt;div&gt;: Uma tag genérica usada para agrupar elementos e estruturar o layout de uma página.</p>
+      <p>Abas (Tabs): Organizam conteúdo em seções sem recarregar a página.</p>
+      <p>CSS:</p>
+      <ul>
+        <li>background-color: define a cor de fundo</li>
+        <li>font-size: define o tamanho da fonte</li>
+        <li>text-align: controla o alinhamento do texto</li>
+        <li>color: define a cor do texto</li>
+        <li>text-transform: controla letras maiúsculas/minúsculas</li>
+      </ul>
+    </div>
+  </section>
+
+  <button onclick="mostrarImagem()">Mostrar Imagem</button>
+
+  <img
+    id="imagem"
+    src="https://i.pinimg.com/736x/45/7a/11/457a11d9cd4d2c9234c61a42a0b6dafd.jpg"
+    style="display: none;"
+    alt="Imagem surpresa"
+  />
+
+  <img src="neymartrio.jpg" alt="Neymar com trio" width="300" />
+  
+  <!-- Vídeo Extra -->
+  <h1>Vídeo Extra</h1>
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/gL02GeWdO-4?rel=0&modestbranding=1&showinfo=0" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+
+  <!-- ENQUETE COMPLETA COM 6 PERGUNTAS -->
+  <div class="enquete">
+    <h2>🔸 Neymar está entre os 5 melhores jogadores da história?</h2>
+    <form id="formEnquete1">
+      <label><input type="radio" name="opcao1" value="Sim"> Sim</label>
+      <label><input type="radio" name="opcao1" value="Não"> Não</label>
+      <label><input type="radio" name="opcao1" value="Ainda vai estar"> Ainda vai estar</label>
+      <br><br>
+      <button type="button" onclick="enviarResposta('formEnquete1', 'resultado1')">Enviar</button>
+    </form>
+    <div id="resultado1" class="resultado"></div>
+  </div>
+
+  <div class="enquete">
+    <h2>⚽ Neymar ainda pode ganhar uma Bola de Ouro?</h2>
+    <form id="formEnquete2">
+      <label><input type="radio" name="opcao2" value="Com certeza"> Com certeza</label>
+      <label><input type="radio" name="opcao2" value="Talvez, depende dele"> Talvez, depende dele</label>
+      <label><input type="radio" name="opcao2" value="Não tem mais chance"> Não tem mais chance</label>
+      <br><br>
+      <button type="button" onclick="enviarResposta('formEnquete2', 'resultado2')">Enviar</button>
+    </form>
+    <div id="resultado2" class="resultado"></div>
+  </div>
+
+  <div class="enquete">
+    <h2>🎯 Qual é o maior ponto forte do Neymar?</h2>
+    <form id="formEnquete3">
+      <label><input type="radio" name="opcao3" value="Dribles"> Dribles</label>
+      <label><input type="radio" name="opcao3" value="Velocidade"> Velocidade</label>
+      <label><input type="radio" name="opcao3" value="Finalização"> Finalização</label>
+      <label><input type="radio" name="opcao3" value="Criatividade"> Criatividade</label>
+      <br><br>
+      <button type="button" onclick="enviarResposta('formEnquete3', 'resultado3')">Enviar</button>
+    </form>
+    <div id="resultado3" class="resultado"></div>
+  </div>
+
+  <div class="enquete">
+    <h2>🏆 Qual título do Neymar você considera mais importante?</h2>
+    <form id="formEnquete4">
+      <label><input type="radio" name="opcao4" value="Copa Libertadores"> Copa Libertadores</label>
+      <label><input type="radio" name="opcao4" value="Champions League"> Champions League</label>
+      <label><input type="radio" name="opcao4" value="Ouro Olímpico"> Ouro Olímpico</label>
+      <label><input type="radio" name="opcao4" value="Copa América"> Copa América</label>
+      <br><br>
+      <button type="button" onclick="enviarResposta('formEnquete4', 'resultado4')">Enviar</button>
+    </form>
+    <div id="resultado4" class="resultado"></div>
+  </div>
+
+  <div class="enquete">
+    <h2>⚽ Neymar deveria jogar mais tempo na seleção brasileira?</h2>
+    <form id="formEnquete5">
+      <label><input type="radio" name="opcao5" value="Sim, enquanto puder"> Sim, enquanto puder</label>
+      <label><input type="radio" name="opcao5" value="Depende do seu rendimento"> Depende do seu rendimento</label>
+      <label><input type="radio" name="opcao5" value="Não, é hora de renovar"> Não, é hora de renovar</label>
+      <br><br>
+      <button type="button" onclick="enviarResposta('formEnquete5', 'resultado5')">Enviar</button>
+    </form>
+    <div id="resultado5" class="resultado"></div>
+  </div>
+
+  <div class="enquete">
+    <h2>🤔 Você acha que Neymar é mais técnico ou mais talentoso?</h2>
+    <form id="formEnquete6">
+      <label><input type="radio" name="opcao6" value="Mais técnico"> Mais técnico</label>
+      <label><input type="radio" name="opcao6" value="Mais talentoso"> Mais talentoso</label>
+      <label><input type="radio" name="opcao6" value="Ambos iguais"> Ambos iguais</label>
+      <br><br>
+      <button type="button" onclick="enviarResposta('formEnquete6', 'resultado6')">Enviar</button>
+    </form>
+    <div id="resultado6" class="resultado"></div>
+  </div>
+
+  <script>
+    function mostrarImagem() {
+      document.getElementById("imagem").style.display = "block";
+    }
+
+    function enviarResposta(formId, resultadoId) {
+      const opcoes = document.forms[formId].elements;
+      let selecionado = null;
+      for (let i = 0; i < opcoes.length; i++) {
+        if (opcoes[i].type === "radio" && opcoes[i].checked) {
+          selecionado = opcoes[i].value;
+          break;
+        }
+      }
+      const resultadoDiv = document.getElementById(resultadoId);
+      if (selecionado) {
+        resultadoDiv.innerText = "Você votou: " + selecionado;
+      } else {
+        resultadoDiv.innerText = "Por favor, selecione uma opção.";
+      }
+    }
+  </script>
+</body>
+</html>
